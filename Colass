@@ -1,0 +1,55 @@
+//Gutierrez Espinosa Annette 3S12
+
+package Colas1;
+
+import java.util.Scanner;
+public class Colas1 {
+
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ int opt, tope = 0, tam;
+ System.out.print("Escribe el tamaño de la cola: ");
+ int[] cola = new int[tam = sc.nextInt()];
+
+ do{
+ System.out.println("\n1.- Agregar\n"
+ + "2.- Mostrar\n"
+ + "3.- Eliminar\n"
+ + "5.- Salir");
+
+ switch(opt = sc.nextInt()){
+ case 1:
+ if(tope<tam){
+ System.out.println("Ingresa un valor: ");
+ cola[tope] = sc.nextInt();
+ tope++;
+ }else{
+ System.out.println(" cola llena :(");
+ }
+ break;
+ case 2:
+ if(tope<0){
+ for(int i=tope-1;i<=0;i++){
+ System.out.println(" "+cola[i]);
+ }
+ }else{
+ System.out.println(" cola vacia :(");
+ }
+ break;
+ case 3:
+ if(tope>0){
+ System.out.println("Dato eliminado (y)");
+ tope--;
+ }else{
+ System.out.println("cola vacia, ");
+ }
+ break;
+ }
+
+ }while(opt!=5);
+
+ }
+
+}
+
+    
